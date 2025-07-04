@@ -8,6 +8,7 @@ export default function Navbar() {
       <h1 className={styles.logo}>Colmenares 🎶</h1>
       <ul className={styles.navLinks}>
         <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/nosotros">Nosotros</Link></li>
         <li><Link to="/productos">Productos</Link></li>
         <li><Link to="/contacto">Contacto</Link></li>
       </ul>
