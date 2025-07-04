@@ -2,14 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fcd34d;
+  background-color: #1e293b;
   padding: 1rem 2rem;
+  border-bottom: 1px solid #334155;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #78350f;
+  color: #facc15;
 }
 
 .navLinks {
@@ -20,11 +21,11 @@
 
 .navLinks a {
   text-decoration: none;
-  color: #78350f;
+  color: #e2e8f0;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .navLinks a:hover {
-  color: #9a3412;
+  color: #facc15;
 }
