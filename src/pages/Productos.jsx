@@ -18,7 +18,6 @@ export default function Productos() {
     navigate(`/productos/${ruta}`);
   };
 
-
   return (
     <div className={styles.productos}>
       <h1 className={styles.titulo}>Explora Nuestros Productos</h1>
