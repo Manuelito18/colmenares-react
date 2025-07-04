@@ -1,1 +1,54 @@
-# Colmenares React 🍯🐝
+<h1 align="center">🎸 Colmenares 🎶</h1>
+<p align="center">
+  <i>La tienda de música donde el frontend suena mejor que un opening de anime bien mezclado.</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-React-blue?style=flat&logo=react" />
+  <img src="https://img.shields.io/badge/Status-En%20Desarrollo-orange?style=flat" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat" />
+</p>
+
+---
+
+## 🐝 ¿Qué es *Colmenares*?
+
+**Colmenares** es una tienda de música ficticia, moderna y melódica, desarrollada con **React** y un diseño frontend bien afinado.  
+Está pensada como un proyecto educativo, visual y funcional, ideal para demostrar habilidades de frontend en el stack moderno.
+
+> *Inspirada por el ritmo del código limpio y el caos hermoso de un solo de guitarra...*
+
+---
+
+## 🎯 Objetivos
+
+- Crear una experiencia de usuario envolvente para una tienda de música.
+- Practicar diseño responsivo con React y tecnologías modernas.
+- Compartir un proyecto abierto para la comunidad.
+
+---
+
+## 🚀 Tech Stack
+
+| Herramienta       | Descripción                          |
+|-------------------|--------------------------------------|
+| ⚛️ React          | Librería principal del frontend      |
+| 🌀 React Router   | Navegación SPA                       |
+| 💨 TailwindCSS    | Estilos rápidos y modernos           |
+| 🧩 Vite           | Bundler ultrarrápido                 |
+| 🎸 Assets libres  | Íconos, imágenes y buena onda        |
+
+---
+
+## 🛠️ Instalación local
+
+```bash
+# 1. Clona el repo
+git clone https://github.com/Manuelito18/colmenares-react.git
+cd colmenares-react
+
+# 2. Instala las dependencias
+npm install
+
+# 3. Corre el servidor
+npm run dev
