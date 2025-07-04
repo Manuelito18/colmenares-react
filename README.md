@@ -1,6 +1,6 @@
-<h1 align="center">🎸 Colmenares 🎶</h1>
+<h1 align="center">🎸 Colmenares Website🎶</h1>
 <p align="center">
-  <i>La tienda de música donde el frontend suena mejor que un opening de anime bien mezclado.</i>
+  <i>La tienda mas poderosisima de todo el mundo mundial prr.</i>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 
 ## 🐝 ¿Qué es *Colmenares*?
 
-**Colmenares** es una tienda de música ficticia, moderna y melódica, desarrollada con **React** y un diseño frontend bien afinado.  
+**Colmenares** es una tienda de música, moderna y melódica, desarrollada con **React** y un diseño frontend bien afinado.  
 Está pensada como un proyecto educativo, visual y funcional, ideal para demostrar habilidades de frontend en el stack moderno.
 
 > *Inspirada por el ritmo del código limpio y el caos hermoso de un solo de guitarra...*
