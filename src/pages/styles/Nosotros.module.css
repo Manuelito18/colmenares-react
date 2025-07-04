@@ -2,7 +2,7 @@
   max-width: 800px;
   margin: 40px auto;
   padding: 32px 24px;
-  background: #fffbee;
+  background: #213f4b;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
@@ -27,7 +27,7 @@
 
 .text {
   font-size: 1.1rem;
-  color: #444;
+  color: #eae3e3;
   line-height: 1.7;
   margin-bottom: 16px;
   text-align: justify;

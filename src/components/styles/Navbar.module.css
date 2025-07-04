@@ -8,10 +8,19 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #facc15;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  width: auto;
+  max-height: 40px;
 }
+
+/* .logo img {
+  height: 100%;
+  width: auto;
+  max-height: 40px;
+  object-fit: contain;
+} */
 
 .navLinks {
   list-style: none;
@@ -23,9 +32,14 @@
   text-decoration: none;
   color: #e2e8f0;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  background-color: #334155;
+  display: inline-block;
 }
 
 .navLinks a:hover {
   color: #facc15;
+  background-color: #475569;
 }
