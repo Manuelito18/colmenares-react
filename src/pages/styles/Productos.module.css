@@ -1,18 +1,75 @@
 .productos {
   padding: 2rem;
-  background-color: #1e293b;
-  border-radius: 1rem;
+  background-color: #0f0f0f;
+  color: white;
+  min-height: 100vh;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #facc15;
-  margin-bottom: 1rem;
+.buscador {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
-.text {
-  font-size: 1rem;
-  color: #cbd5e1;
+.buscador input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 300px;
+}
+
+.buscador button {
+  padding: 0.5rem 1.2rem;
+  background-color: #facc15;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+.gridCategorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categoriaCard {
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.categoriaCard:hover {
+  transform: scale(1.05);
+}
+
+.categoriaCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.categoriaNombre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
