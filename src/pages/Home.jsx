@@ -1,6 +1,6 @@
 import styles from "./styles/Home.module.css";
 import PromoCarousel from "../components/PromoCarousel";
-import { imagenesPromo } from "../Data/img-carrusel";
+import { imagenesPromo } from "../data/img-carrusel";
 
 export default function Home() {
   return (

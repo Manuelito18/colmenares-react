@@ -2,7 +2,7 @@ import styles from "./styles/Productos.module.css";
 
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { categorias } from "../Data/categProducs";
+import { categorias } from "../data/categProducs";
 
 export default function Productos() {
   const [busqueda, setBusqueda] = useState("");

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { productosPorCategoria } from "../Data/productos";
+import { productosPorCategoria } from "../data/productos";
 import ProductoCard from "../components/ProductCard";
 import styles from "./styles/CategoriaProductos.module.css";
 

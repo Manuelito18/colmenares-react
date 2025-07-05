@@ -52,3 +52,13 @@ npm install
 
 # 3. Corre el servidor
 npm run dev
+```
+
+## APIS usadas
+<ul>
+  <li>https://nekosia.cat/documentation?page=introduction</li>
+  <li>https://docs.waifu.it/?ref=public_apis&utm_medium=website</li>
+  <li>https://waifu.pics/docs?ref=public_apis&utm_medium=website</li>
+  <li>https://docs.waifu.im/?ref=public_apis&utm_medium=website</li>
+  <li>https://soruly.github.io/trace.moe-api/#/?ref=public_apis&utm_medium=website</li>
+</ul>
