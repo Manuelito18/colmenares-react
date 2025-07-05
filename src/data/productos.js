@@ -5,28 +5,28 @@ export const productosPorCategoria = {
       nombre: "Guitarra Yamaha F310",
       precio: 400,
       anio: 2022,
-      imagen: "/imgs/productos/yamaha-f310.jpg",
+      imagen: "/imgs/productos/Guitarra-Yamaha-F310.jpg",
     },
     {
       id: 2,
       nombre: "Guitarra Fender Stratocaster",
       precio: 1200,
       anio: 2023,
-      imagen: "/imgs/productos/stratocaster.jpg",
+      imagen: "/imgs/productos/Guitarra-Fender-Stratocaster.jpg",
     },
     {
       id: 3,
       nombre: "Guitarra Gibson Les Paul",
       precio: 2500,
       anio: 2023,
-      imagen: "/imgs/productos/gibson-lespaul.jpg",
+      imagen: "/imgs/productos/Guitarra-Gibson-Les-Paul.jpg",
     },
     {
       id: 4,
       nombre: "Guitarra Epiphone Casino",
       precio: 800,
       anio: 2022,
-      imagen: "/imgs/productos/epiphone-casino.jpg",
+      imagen: "/imgs/productos/Guitarra-Epiphone-Casino.jpg",
     },
     {
       id: 5,
@@ -263,6 +263,8 @@ export const productosPorCategoria = {
       imagen: "/imgs/productos/pedaltrain-classic2.jpg",
     },
   ],
+
+  /* tan facil que seria con los JSON, pero no quieren oee :C */
   microfonos: [
     {
       id: 37,
