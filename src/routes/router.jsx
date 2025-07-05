@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Productos from "../pages/Productos";
 import Contacto from "../pages/Contacto";
 import Nosotros from "../pages/Nosotros";
+import CategoriaProductos from "../pages/CategoriaProductos";
 
 const router = createBrowserRouter([
   {
@@ -14,12 +15,9 @@ const router = createBrowserRouter([
       { path: "productos", element: <Productos /> },
       { path: "contacto", element: <Contacto /> },
       { path: "nosotros", element: <Nosotros /> },
+      { path: "productos/:categoriaId", element: <CategoriaProductos /> },
     ],
   },
 ]);
-
-
-
-
 
 export default router;
