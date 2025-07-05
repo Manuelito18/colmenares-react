@@ -10,7 +10,6 @@ export default function Productos() {
 
   const manejarBusqueda = (e) => {
     e.preventDefault();
-    // Aquí podrías redirigir a una página con los resultados
     console.log("Buscando:", busqueda);
   };
 

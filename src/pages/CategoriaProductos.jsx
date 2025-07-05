@@ -1,28 +1,22 @@
 import { useParams } from "react-router-dom";
-import { productos } from "../Consts/productos";
+import { productosPorCategoria } from "../data/productos";
+import ProductoCard from "../components/ProductCard";
 import styles from "./styles/CategoriaProductos.module.css";
 
 export default function CategoriaProductos() {
   const { categoriaId } = useParams();
-  const productosFiltrados = productos.filter(
-    (prod) => prod.categoria === categoriaId
-  );
+  const productos = productosPorCategoria[categoriaId] || [];
 
   return (
     <div className={styles.categoria}>
       <h1 className={styles.titulo}>Productos de {categoriaId}</h1>
 
-      {productosFiltrados.length === 0 ? (
+      {productos.length === 0 ? (
         <p>No hay productos en esta categoría todavía...</p>
       ) : (
         <div className={styles.grid}>
-          {productosFiltrados.map((prod) => (
-            <div key={prod.id} className={styles.card}>
-              <img src={prod.imagen} alt={prod.nombre} />
-              <h2>{prod.nombre}</h2>
-              <p>S/. {prod.precio}</p>
-              <small>Año: {prod.anio}</small>
-            </div>
+          {productos.map((prod) => (
+            <ProductoCard key={prod.id} {...prod} /> //ese truco no lo conocia, con el '{...obj}' le pasa el objeto desglosado como props
           ))}
         </div>
       )}
