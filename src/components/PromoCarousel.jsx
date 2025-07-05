@@ -21,7 +21,7 @@ export default function PromoCarousel({ imagenes = [] }) {
   if (imagenes.length === 0) {
     return (
       <div className={styles.carouselContainer}>
-        <p className={styles.error}>⚠️ No hay imágenes para mostrar.</p>
+        <p className={styles.error}>⚠️ No hay imágenes mi pana.</p>
       </div>
     );
   }

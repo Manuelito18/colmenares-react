@@ -1,0 +1,28 @@
+.categoria {
+  padding: 2rem;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #9333ea;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
