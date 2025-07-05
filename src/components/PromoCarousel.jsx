@@ -11,13 +11,12 @@ const imagenes = [slider1, slider2, slider3];
 
 export default function PromoCarousel() {
   const [indice, setIndice] = useState(0);
-
   useEffect(() => {
     const intervalo = setInterval(() => {
       setIndice((prev) => (prev + 1) % imagenes.length);
     }, 10000);
     return () => clearInterval(intervalo);
-  }, []); // si te olvidas de este te mueres literal wey, ese fue el verdarero motivo por el cual instale linux bro 💀
+  }, []); // si te olvidas de este te mueres literal wey, este fue el verdarero motivo por el cual instale linux bro 💀
 
   const irA = (i) => setIndice(i);
   const anterior = () => setIndice((indice - 1 + imagenes.length) % imagenes.length);
