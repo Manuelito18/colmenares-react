@@ -1,5 +1,6 @@
 import styles from "./styles/Home.module.css";
 import PromoCarousel from "../components/PromoCarousel";
+import { imagenesPromo } from "../Consts/img-carrusel";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </p>
     </section>
     <section>
-      <PromoCarousel />
+      <PromoCarousel imagenes={imagenesPromo}/>
     </section>
     </>
   );
