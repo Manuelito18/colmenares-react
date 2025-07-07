@@ -1,9 +1,8 @@
 .footer {
-  background: #fffbee;
-  border-top: 2px solid #e6c200;
+  background: oklch(17.901% 0.02617 266.485);
+  border-top: 1px solid #374151;
   padding: 32px 0 20px 0;
   text-align: center;
-  margin-top: 48px;
 }
 
 .content {
@@ -14,8 +13,8 @@
   align-items: center;
 }
 
-p {
-  color: #8b5c00;
+.content p {
+  color: #9ca3af;
   font-size: 1.1rem;
   margin-bottom: 18px;
   letter-spacing: 0.5px;
@@ -28,7 +27,7 @@ p {
 }
 
 .social a {
-  color: #b8860b;
+  color: #9ca3af;
   font-size: 2rem;
   transition: color 0.2s, transform 0.2s;
   display: flex;
@@ -37,7 +36,7 @@ p {
 
 .social a:hover,
 .social a:focus {
-  color: #e6c200;
+  color: #ffffff;
   transform: scale(1.18) rotate(-8deg);
   outline: none;
 }
@@ -51,7 +50,7 @@ p {
     gap: 18px;
   }
 
-  p {
+  .content p {
     font-size: 1rem;
   }
 }

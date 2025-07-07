@@ -1,7 +1,6 @@
 .header {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #374151;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -56,7 +55,7 @@
 }
 
 .navbar {
-  display: none; /* Por defecto oculto en móvil */
+  display: none;
   gap: 2rem;
   list-style: none;
   padding: 0;
@@ -153,18 +152,9 @@
 @media (min-width: 768px) {
   .navbar {
     display: flex;
-    /* Elimina los margin-auto si no te dan el centrado visual deseado */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-
-    /* Centra el navbar directamente en el espacio restante */
-    flex-grow: 1; /* Permite que ocupe el espacio disponible */
-    justify-content: center; /* Centra sus propios elementos */
-
-    /* Desplaza el navbar a la izquierda para compensar el logo */
-    transform: translateX(
-      -50px
-    ); /* Ajusta este valor (ej: -50px, -75px, -100px) */
+    flex-grow: 1;
+    justify-content: center;
+    transform: translateX(-50px);
   }
   .btnGhostMenuBtn {
     display: none;
