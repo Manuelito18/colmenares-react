@@ -1,16 +1,14 @@
 import styles from "./styles/Contacto.module.css";
+import BlockText from "../components/BlockText";
 
 export default function Contacto() {
   return (
-    <div className={styles.contacto}>
     <section className={styles.block}>
-      <h2 className={styles.title}>Contáctanos 📞</h2>
-      <p className={styles.text}>
-        ¿Tienes dudas, sugerencias o simplemente quieres hablar de guitarras? ¡Escríbenos!
-      </p>
+      <BlockText
+        title="Contáctanos"
+        text="¿Tienes dudas, sugerencias o simplemente quieres hablar de guitarras? ¡Escríbenos!"
+        background="linear-gradient(135deg, #591C86, #821844)"
+      />
     </section>
-    </div>
   );
 }
-
-
