@@ -2,6 +2,7 @@
 import HeroSlider from "../components/HeroSlider";
 import { promos } from "../data/promos";
 import CategoriesBlock from "../components/CategoriesBlock";
+import ProductBlock from "../components/ProductBlock";
 
 export default function Home() {
   return (
@@ -11,6 +12,9 @@ export default function Home() {
       </section>
       <section>
         <CategoriesBlock />
+      </section>
+      <section>
+        <ProductBlock />
       </section>
     </>
   );
