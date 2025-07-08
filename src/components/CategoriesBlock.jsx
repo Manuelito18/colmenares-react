@@ -2,7 +2,7 @@ import styles from "./styles/CategoriesBlock.module.css";
 import { useNavigate } from "react-router-dom";
 import { categories } from "../data/favCateg";
 
-export default function Categories() {
+export default function CategoriesBlock() {
   const navigate = useNavigate();
 
   const irACategoria = (ruta) => {
