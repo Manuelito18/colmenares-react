@@ -1,5 +1,6 @@
 import styles from "./styles/Nosotros.module.css";
 import BlockText from "../components/BlockText";
+import CardPer from "../components/CardPer";
 
 export default function Nosotros() {
   return (
@@ -31,13 +32,30 @@ export default function Nosotros() {
       </div>
       <div className={styles.team}>
         <h2>Nuestro Equipo</h2>
+        <div className={styles.teamUser}>
+          <CardPer
+            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+            name="José Manuel Fernández Sandoval"
+            role="Gerente"
+            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
+          />
+          <CardPer
+            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+            name="José Manuel Fernández Sandoval"
+            role="Gerente"
+            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
+          />
+          <CardPer
+            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+            name="José Manuel Fernández Sandoval"
+            role="Gerente"
+            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
+          />
+        </div>
       </div>
-      {/* <div className={styles.container}>
-        <h2>Nuestros Valores</h2>
-      </div>
-      <div className={styles.container}>
+      <div className={styles.numbers}>
         <h2>Nuestros Numeros</h2>
-      </div> */}
+      </div>
     </div>
   );
 }
