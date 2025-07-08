@@ -55,6 +55,28 @@ export default function Nosotros() {
       </div>
       <div className={styles.numbers}>
         <h2>Nuestros Numeros</h2>
+        <div className={styles.dats}>
+          <BlockText
+            title="25+"
+            text="Años de experiencia"
+            background="linear-gradient(135deg, #F59B0C, #F97416)"
+          />
+          <BlockText
+            title="5000+"
+            text="Clientes satisfechos"
+            background="linear-gradient(135deg, #F59B0C, #F97416)"
+          />
+          <BlockText
+            title="500+"
+            text="Instrumentos en Stock"
+            background="linear-gradient(135deg, #F59B0C, #F97416)"
+          />
+          <BlockText
+            title="50+"
+            text="Marcas representadas"
+            background="linear-gradient(135deg, #F59B0C, #F97416)"
+          />
+        </div>
       </div>
     </div>
   );
