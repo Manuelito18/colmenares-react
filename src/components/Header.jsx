@@ -17,7 +17,9 @@ export default function Navbar() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>
         <div className={styles.logoIcon}>
-          <img src="/imgs/logonar.png" alt="Logo Colmenares" />
+          <Link to="/">
+            <img src="/imgs/logonar.png" alt="Logo Colmenares" />
+          </Link>
         </div>
       </div>
 
@@ -26,10 +28,10 @@ export default function Navbar() {
           <Link to="/">Inicio</Link>
         </li>
         <li>
-          <Link to="/nosotros">Nosotros</Link>
+          <Link to="/productos">Productos</Link>
         </li>
         <li>
-          <Link to="/productos">Productos</Link>
+          <Link to="/nosotros">Nosotros</Link>
         </li>
         <li>
           <Link to="/contacto">Contacto</Link>
