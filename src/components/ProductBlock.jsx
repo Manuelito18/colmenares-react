@@ -1,8 +1,10 @@
 import styles from "./styles/ProductBlock.module.css";
 import { productos } from "../data/productos";
 import ProductCard from "./CardProduct";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductBlock() {
+  const navigate = useNavigate();
   const filtrarProductosPorEstado = (data) => {
     const productosFiltrados = {};
     var temp = 0;
@@ -20,18 +22,29 @@ export default function ProductBlock() {
 
   const productosEnOferta = filtrarProductosPorEstado(productos);
 
+  const irA = () => {
+    navigate("/productos");
+  };
+
   return (
-    <section className={styles.section}>
-      <h2 className={styles.title}>Productos Destacados</h2>
-      <div className={styles.grid}>
-        {productosEnOferta.map((producto) => (
-          <ProductCard
-            key={producto.id}
-            producto={producto}
-            onAddToCart={(p) => console.log("Añadir al carrito:", p)}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <section className={styles.section}>
+        <h2 className={styles.title}>Productos Destacados</h2>
+        <div className={styles.grid}>
+          {productosEnOferta.map((producto) => (
+            <ProductCard
+              key={producto.id}
+              producto={producto}
+              onAddToCart={(p) => console.log("Añadir al carrito:", p)}
+            />
+          ))}
+        </div>
+      </section>
+      <section className={styles.section}>
+        <button className={styles.btn} onClick={() => irA()}>
+          Ver todos los Productos
+        </button>
+      </section>
+    </>
   );
 }
