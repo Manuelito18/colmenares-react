@@ -22,22 +22,33 @@ export default function Navbar() {
       </div>
 
       <nav className={styles.navbar}>
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/nosotros">Nosotros</Link></li>
-        <li><Link to="/productos">Productos</Link></li>
-        <li><Link to="/contacto">Contacto</Link></li>
+        <li>
+          <Link to="/">Inicio</Link>
+        </li>
+        <li>
+          <Link to="/nosotros">Nosotros</Link>
+        </li>
+        <li>
+          <Link to="/productos">Productos</Link>
+        </li>
+        <li>
+          <Link to="/contacto">Contacto</Link>
+        </li>
       </nav>
 
       <div className={styles.headerActions}>
         <button className={styles.btnGhost}>
-          <img className={styles.imgSearch} src="/imgs/search.svg" alt="Buscar" />
+          <img
+            className={styles.imgSearch}
+            src="/imgs/search.svg"
+            alt="Buscar"
+          />
         </button>
         <button className={styles.btnGhostCartBtn}>
           <img className={styles.imgCart} src="/imgs/cart.svg" alt="Carrito" />
           <span className={styles.cartBadge}></span>
         </button>
-        <button 
-        className={styles.btnGhostMenuBtn}>
+        <button className={styles.btnGhostMenuBtn}>
           <img className={styles.imgMenu} src="/imgs/menu.svg" alt="Menú" />
         </button>
       </div>
