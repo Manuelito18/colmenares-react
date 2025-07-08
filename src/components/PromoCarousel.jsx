@@ -33,10 +33,8 @@ export default function PromoCarousel({ imagenes = [] }) {
         alt={`Promo ${indice + 1}`}
         className={styles.carouselImage}
       />
-
       <button className={styles.controlLeft} onClick={anterior}>⬅</button>
       <button className={styles.controlRight} onClick={siguiente}>➡</button>
-
       <div className={styles.dotsContainer}>
         {imagenes.map((_, i) => (
           <button
