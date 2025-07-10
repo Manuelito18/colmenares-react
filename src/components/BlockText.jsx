@@ -2,7 +2,8 @@ import styles from "./styles/BlockText.module.css";
 
 const BlockText = ({ icon = null, title, text, background }) => {
   const blockStyle = {
-    background: background || "linear-gradient(135deg, #ece9e6, #ffffff)",
+    background:
+      background || "linear-gradient(135deg,rgb(30, 63, 53),rgb(25, 144, 99))",
   };
   return (
     <div className={styles.block} style={blockStyle}>
