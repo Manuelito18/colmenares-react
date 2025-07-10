@@ -7,15 +7,9 @@ import ProductBlock from "../components/ProductBlock";
 export default function Home() {
   return (
     <div className={styles.home}>
-      <section>
-        <HeroSlider slides={promos} />
-      </section>
-      <section>
-        <CategoriesBlock />
-      </section>
-      <section>
-        <ProductBlock />
-      </section>
+      <HeroSlider slides={promos} />
+      <CategoriesBlock />
+      <ProductBlock />
     </div>
   );
 }
