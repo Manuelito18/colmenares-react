@@ -1,17 +1,5 @@
 .block {
   padding: 2rem;
   border-radius: 1rem;
-  text-align: center;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #facc15;
-  margin-bottom: 1rem;
-}
-
-.text {
-  font-size: 1rem;
-  color: #cbd5e1;
+  /* text-align: center; */
 }
