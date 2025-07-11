@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className={styles.logo}>
         <div className={styles.logoIcon}>
           <Link to="/">
-            <img src="/imgs/logonar.png" alt="Logo Colmenares" />
+            <img src="/imgs/icons/logonar.png" alt="Logo Colmenares" />
           </Link>
         </div>
       </div>
@@ -42,16 +42,24 @@ export default function Navbar() {
         <button className={styles.btnGhost}>
           <img
             className={styles.imgSearch}
-            src="/imgs/search.svg"
+            src="/imgs/icons/search.svg"
             alt="Buscar"
           />
         </button>
         <button className={styles.btnGhostCartBtn}>
-          <img className={styles.imgCart} src="/imgs/cart.svg" alt="Carrito" />
+          <img
+            className={styles.imgCart}
+            src="/imgs/icons/cart.svg"
+            alt="Carrito"
+          />
           <span className={styles.cartBadge}></span>
         </button>
         <button className={styles.btnGhostMenuBtn}>
-          <img className={styles.imgMenu} src="/imgs/menu.svg" alt="Menú" />
+          <img
+            className={styles.imgMenu}
+            src="/imgs/icons/menu.svg"
+            alt="Menú"
+          />
         </button>
       </div>
     </header>

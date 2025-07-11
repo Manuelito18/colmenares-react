@@ -21,7 +21,7 @@ export default function Contacto() {
           </div>
           <div className={styles.infoBlock}>
             <h4>📍 Dirección</h4>
-            <p>Calle de las Guitarras, 123, Madrid</p>
+            <p>Direccion todavia no se construye pipol</p>
           </div>
           <div className={styles.infoBlock}>
             <h4>⏰ Horario</h4>

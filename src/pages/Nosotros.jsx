@@ -27,30 +27,30 @@ export default function Nosotros() {
           </p>
         </div>
         <div className={styles.historyImage}>
-          <img src="/imgs/historia.jpg" alt="hombre tocando guitarra" />
+          <img src="/imgs/etc/historia.jpg" alt="hombre tocando guitarra" />
         </div>
       </div>
       <div className={styles.team}>
         <h2>Nuestro Equipo</h2>
         <div className={styles.teamUser}>
           <CardPer
-            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-            name="José Manuel Fernández Sandoval"
-            role="Gerente"
-            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
+            img="https://unavatar.io/github/furry"
+            name="Pietro"
+            role="Furry"
+            des="La vida solo tiene sentido si hay furrys en ella."
           />
           <CardPer
             github="https://github.com/manuelito18/"
             img="https://unavatar.io/github/manuelito18"
-            name="José Manuel Fernández Sandoval"
-            role="Programador"
-            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
+            name="Manuel"
+            role="Otaku"
+            des="Solo se que otaku fui y otaku seré. Kurumi mi Diosa"
           />
           <CardPer
-            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-            name="José Manuel Fernández Sandoval"
-            role="Gerente"
-            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
+            img="https://unavatar.io/x/lolicon"
+            name="Josue"
+            role="Lolicon"
+            des="La edad es solo un número, lo que realmente importa es que sean lolis"
           />
         </div>
       </div>
@@ -58,12 +58,12 @@ export default function Nosotros() {
         <h2>Nuestros Numeros</h2>
         <div className={styles.dats}>
           <BlockText
-            title="25+"
+            title="15+"
             text="Años de experiencia"
             background="linear-gradient(135deg, #F59B0C, #F97416)"
           />
           <BlockText
-            title="5000+"
+            title="2000+"
             text="Clientes satisfechos"
             background="linear-gradient(135deg, #F59B0C, #F97416)"
           />
