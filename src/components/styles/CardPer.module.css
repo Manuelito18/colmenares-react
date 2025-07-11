@@ -8,6 +8,7 @@
   max-width: 240px;
   margin: 16px auto;
   border: 1px solid #333;
+  position: relative; /* Necesario para posicionar el ícono */
 }
 
 .card:hover {
@@ -51,4 +52,18 @@
   font-size: 0.95rem;
   color: #ccc;
   line-height: 1.5;
+}
+
+/* Nuevo estilo para el icono de GitHub */
+.githubIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #aaa;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.githubIcon:hover {
+  color: #ffd700;
 }
