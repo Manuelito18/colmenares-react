@@ -40,9 +40,10 @@ export default function Nosotros() {
             des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
           />
           <CardPer
-            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+            github="https://github.com/manuelito18/"
+            img="https://unavatar.io/github/manuelito18"
             name="José Manuel Fernández Sandoval"
-            role="Gerente"
+            role="Programador"
             des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
           />
           <CardPer
