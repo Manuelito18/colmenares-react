@@ -1,6 +1,7 @@
 import styles from "./styles/Nosotros.module.css";
 import BlockText from "../components/BlockText";
 import CardPer from "../components/CardPer";
+import { users } from "../data/users";
 
 export default function Nosotros() {
   return (
@@ -33,25 +34,9 @@ export default function Nosotros() {
       <div className={styles.team}>
         <h2>Nuestro Equipo</h2>
         <div className={styles.teamUser}>
-          <CardPer
-            img="https://unavatar.io/github/furry"
-            name="Pietro"
-            role="Furry"
-            des="La vida solo tiene sentido si hay furrys en ella."
-          />
-          <CardPer
-            github="https://github.com/manuelito18/"
-            img="https://unavatar.io/github/manuelito18"
-            name="Manuel"
-            role="Otaku"
-            des="Solo se que otaku fui y otaku seré. Kurumi mi Diosa"
-          />
-          <CardPer
-            img="https://unavatar.io/x/lolicon"
-            name="Josue"
-            role="Lolicon"
-            des="La edad es solo un número, lo que realmente importa es que sean lolis"
-          />
+          {users.map((user, index) => (
+            <CardPer key={index} {...user} />
+          ))}
         </div>
       </div>
       <div className={styles.numbers}>
