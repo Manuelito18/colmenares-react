@@ -4,6 +4,7 @@ import styles from "./styles/Header.module.css";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const manejarScroll = () => {
@@ -12,6 +13,10 @@ export default function Navbar() {
     window.addEventListener("scroll", manejarScroll);
     return () => window.removeEventListener("scroll", manejarScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
@@ -23,18 +28,26 @@ export default function Navbar() {
         </div>
       </div>
 
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${isMenuOpen ? styles.navOpen : ""}`}>
         <li>
-          <Link to="/">Inicio</Link>
+          <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            Inicio
+          </Link>
         </li>
         <li>
-          <Link to="/productos">Productos</Link>
+          <Link to="/productos" onClick={() => setIsMenuOpen(false)}>
+            Productos
+          </Link>
         </li>
         <li>
-          <Link to="/nosotros">Nosotros</Link>
+          <Link to="/nosotros" onClick={() => setIsMenuOpen(false)}>
+            Nosotros
+          </Link>
         </li>
         <li>
-          <Link to="/contacto">Contacto</Link>
+          <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
+            Contacto
+          </Link>
         </li>
       </nav>
 
@@ -54,7 +67,11 @@ export default function Navbar() {
           />
           <span className={styles.cartBadge}></span>
         </button>
-        <button className={styles.btnGhostMenuBtn}>
+        <button
+          className={styles.btnGhostMenuBtn}
+          onClick={toggleMenu}
+          aria-label="Abrir menú"
+        >
           <img
             className={styles.imgMenu}
             src="/imgs/icons/menu.svg"
