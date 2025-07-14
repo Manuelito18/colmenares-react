@@ -28,7 +28,7 @@ export default function Nosotros() {
           </p>
         </div>
         <div className={styles.historyImage}>
-          <img src="/imgs/etc/historia.jpg" alt="hombre tocando guitarra" />
+          <img src="/imgs/etc/historia.webp" alt="hombre tocando guitarra" />
         </div>
       </div>
       <div className={styles.team}>
