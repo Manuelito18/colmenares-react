@@ -54,7 +54,7 @@ export default function Contacto() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9937762537547!2d-79.84284262656787!3d-6.770610266206784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceed7fae8046b%3A0xc8a297480972a329!2sInstrumentos%20Musicales%20%22COLMENARES%22!5e0!3m2!1ses-419!2spe!4v1752184328958!5m2!1ses-419!2spe"
           width="100%"
           height="300"
-          allowFullscreen=""
+          /* allowFullscreen="" */
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
