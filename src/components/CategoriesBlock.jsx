@@ -14,11 +14,14 @@ export default function CategoriesBlock() {
       <h2 className={styles.title}>Categorías Preferidas</h2>
       <div className={styles.grid}>
         {categories.map((cat, i) => (
-          <div key={i} className={styles.card}>
+          <div
+            key={i}
+            className={styles.card}
+            onClick={() => irACategoria(cat.ruta)}
+          >
             <div
               className={styles.iconWrapper}
               style={{ background: cat.color }}
-              onClick={() => irACategoria(cat.ruta)}
             >
               <img src={cat.icon} alt={cat.title} className={styles.icon} />
             </div>

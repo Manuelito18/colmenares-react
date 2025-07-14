@@ -1,9 +1,12 @@
-import { useState, useEffect, useCallback } from "react";
 import styles from "../components/styles/HeroSlider.module.css";
 import ChevronLeft from "../../src/assets/imgs/ChevronLeft.svg";
 import ChevronRight from "../../src/assets/imgs/ChevronRight.svg";
+import { useState, useEffect, useCallback } from "react";
+
+import { useNavigate } from "react-router-dom";
 
 const HeroSlider = ({ slides = [] }) => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesCount = slides.length;
 
@@ -26,6 +29,17 @@ const HeroSlider = ({ slides = [] }) => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, [nextSlide, slidesCount]);
+
+  function irACatalogo() {
+    //mala practica pero que pereza hacerlo bien1
+    var ir;
+    if (currentSlide === 0) ir = "guitarras";
+    if (currentSlide === 1) ir = "teclados-pianos";
+    if (currentSlide === 2) ir = "baterias-percusion";
+    if (currentSlide === 3) ir = "vientos";
+    if (currentSlide === 4) ir = "dj-iluminacion";
+    navigate(`/productos/${ir}`);
+  }
 
   if (!slidesCount) return null;
 
@@ -51,10 +65,16 @@ const HeroSlider = ({ slides = [] }) => {
                   <p className={styles.heroSubtitle}>{slide.subtitle}</p>
                   <p className={styles.heroDescription}>{slide.description}</p>
                   <div className={styles.heroButtons}>
-                    <button className={styles.btn + " " + styles.btnPrimary}>
+                    <button
+                      className={styles.btn + " " + styles.btnPrimary}
+                      onClick={() => irACatalogo()}
+                    >
                       Ver Ofertas
                     </button>
-                    <button className={styles.btn + " " + styles.btnOutline}>
+                    <button
+                      onClick={() => irACatalogo()}
+                      className={styles.btn + " " + styles.btnOutline}
+                    >
                       Catálogo
                     </button>
                   </div>

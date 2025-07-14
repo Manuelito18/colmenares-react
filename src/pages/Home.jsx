@@ -1,4 +1,4 @@
-//import styles from "./styles/Home.module.css";  -- todavia falta meter cosita o detallitos
+import styles from "./styles/Home.module.css";
 import HeroSlider from "../components/HeroSlider";
 import { promos } from "../data/promos";
 import CategoriesBlock from "../components/CategoriesBlock";
@@ -6,17 +6,10 @@ import ProductBlock from "../components/ProductBlock";
 
 export default function Home() {
   return (
-    <>
-      <section>
-        <HeroSlider slides={promos} />
-      </section>
-      <section>
-        <CategoriesBlock />
-      </section>
-      <section>
-        <ProductBlock />
-      </section>
-    </>
+    <div className={styles.home}>
+      <HeroSlider slides={promos} />
+      <CategoriesBlock />
+      <ProductBlock />
+    </div>
   );
 }
-1;

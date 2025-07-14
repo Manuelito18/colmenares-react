@@ -1,6 +1,7 @@
 import styles from "./styles/Nosotros.module.css";
 import BlockText from "../components/BlockText";
 import CardPer from "../components/CardPer";
+import { users } from "../data/users";
 
 export default function Nosotros() {
   return (
@@ -27,42 +28,27 @@ export default function Nosotros() {
           </p>
         </div>
         <div className={styles.historyImage}>
-          <img src="/imgs/historia.jpg" alt="hombre tocando guitarra" />
+          <img src="/imgs/etc/historia.webp" alt="hombre tocando guitarra" />
         </div>
       </div>
       <div className={styles.team}>
         <h2>Nuestro Equipo</h2>
         <div className={styles.teamUser}>
-          <CardPer
-            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-            name="José Manuel Fernández Sandoval"
-            role="Gerente"
-            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
-          />
-          <CardPer
-            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-            name="José Manuel Fernández Sandoval"
-            role="Gerente"
-            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
-          />
-          <CardPer
-            img="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-            name="José Manuel Fernández Sandoval"
-            role="Gerente"
-            des="Un buen programador es un otaku fan de Rem y devoto de la Diosa Kurumi Kosaki"
-          />
+          {users.map((user, index) => (
+            <CardPer key={index} {...user} />
+          ))}
         </div>
       </div>
       <div className={styles.numbers}>
         <h2>Nuestros Numeros</h2>
         <div className={styles.dats}>
           <BlockText
-            title="25+"
+            title="15+"
             text="Años de experiencia"
             background="linear-gradient(135deg, #F59B0C, #F97416)"
           />
           <BlockText
-            title="5000+"
+            title="2000+"
             text="Clientes satisfechos"
             background="linear-gradient(135deg, #F59B0C, #F97416)"
           />

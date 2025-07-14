@@ -1,22 +1,76 @@
 import { useParams } from "react-router-dom";
 import { productos } from "../data/productos";
-import ProductoCard from "../components/ProductCard";
+import { categorias } from "../data/categProducs";
+import CardProduct from "../components/CardProduct";
 import styles from "./styles/CategoriaProductos.module.css";
+import { useMemo, useState } from "react";
 
 export default function CategoriaProductos() {
   const { categoriaId } = useParams();
-  const getProductos = productos[categoriaId] || [];
+  const [busqueda, setBusqueda] = useState("");
+  const [ordenPrecio, setOrdenPrecio] = useState("asc");
+
+  const productosCategoria = productos[categoriaId] || [];
+
+  const nombreCategoria =
+    categorias.find((cat) => cat.ruta === categoriaId)?.nombre || categoriaId;
+
+  const productosFiltrados = useMemo(() => {
+    let lista = productosCategoria;
+
+    if (busqueda) {
+      lista = lista.filter((p) =>
+        p.nombre.toLowerCase().includes(busqueda.toLowerCase())
+      );
+    }
+
+    const destacados = lista.filter((p) => p.stado === true);
+    const normales = lista.filter((p) => p.stado !== true);
+
+    const ordenar = (arr) =>
+      [...arr].sort((a, b) =>
+        ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
+      );
+
+    return [...ordenar(destacados), ...ordenar(normales)];
+  }, [productosCategoria, busqueda, ordenPrecio]);
+
+  const handleAddToCart = (producto) => {
+    console.log("Agregar al carrito:", producto);
+  };
 
   return (
     <div className={styles.categoria}>
-      <h1 className={styles.titulo}>Productos de {categoriaId}</h1>
+      <h1 className={styles.titulo}>Colección de {nombreCategoria}</h1>
 
-      {getProductos.length === 0 ? (
-        <p>No hay productos en esta categoría todavía...</p>
+      <div className={styles.controles}>
+        <input
+          type="text"
+          placeholder="Buscar producto..."
+          value={busqueda}
+          onChange={(e) => setBusqueda(e.target.value)}
+        />
+        <select
+          value={ordenPrecio}
+          onChange={(e) => setOrdenPrecio(e.target.value)}
+        >
+          <option value="asc">Precio: menor a mayor</option>
+          <option value="desc">Precio: mayor a menor</option>
+        </select>
+      </div>
+
+      {productosFiltrados.length === 0 ? (
+        <p className={styles.vacio}>
+          No hay productos en esta categoría todavía...
+        </p>
       ) : (
         <div className={styles.grid}>
-          {getProductos.map((prod) => (
-            <ProductoCard key={prod.id} {...prod} /> //ese truco no lo conocia, con el '{...obj}' le pasa el objeto desglosado como props
+          {productosFiltrados.map((prod) => (
+            <CardProduct
+              key={prod.id}
+              producto={{ ...prod, categoria: categoriaId }}
+              onAddToCart={handleAddToCart}
+            />
           ))}
         </div>
       )}

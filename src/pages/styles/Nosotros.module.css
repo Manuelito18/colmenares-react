@@ -6,7 +6,7 @@
   display: grid;
 }
 .section {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .history {
@@ -15,6 +15,7 @@
   flex-wrap: wrap;
   gap: 2.5rem;
   transition: all 0.3s ease-in-out;
+  margin: 0 auto;
 }
 
 .historyText {

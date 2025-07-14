@@ -1,5 +1,13 @@
 // src/components/Footer.jsx
-import { FaGithub, FaEnvelope, FaYoutube, FaBook, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaEnvelope,
+  FaYoutube,
+  FaBook,
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 import styles from "./styles/Footer.module.css";
 
 export default function Footer() {
@@ -40,10 +48,7 @@ export default function Footer() {
           >
             <FaWhatsapp />
           </a>
-          <a
-            href="mailto:mancol@hotmail.com"
-            aria-label="Email"
-          >
+          <a href="mailto:mancol@hotmail.com" aria-label="Email">
             <FaEnvelope />
           </a>
           <a
@@ -67,4 +72,3 @@ export default function Footer() {
     </footer>
   );
 }
-
