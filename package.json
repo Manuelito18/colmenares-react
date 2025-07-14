@@ -1,7 +1,7 @@
 {
   "name": "colmenares-react",
   "private": true,
-  "version": "0.a.1",
+  "version": "0.a.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
