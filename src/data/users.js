@@ -14,26 +14,3 @@ export const users = [
     github: null,
   }
 ]
-/*
-<div className={styles.teamUser}>
-  <CardPer
-    img="https://unavatar.io/github/furry"
-    name="Pietro"
-    role="Furry"
-    des="La vida solo tiene sentido si hay furrys en ella."
-  />
-  <CardPer
-    github="https://github.com/manuelito18/"
-    img="https://unavatar.io/github/manuelito18"
-    name="Manuel"
-    role="Otaku"
-    des="Solo se que otaku fui y otaku seré. Kurumi mi Diosa"
-  />
-  <CardPer
-    img="https://unavatar.io/x/lolicon"
-    name="Josue"
-    role="Lolicon"
-    des="La edad es solo un número, lo que realmente importa es que sean lolis"
-  />
-</div>
-*/
