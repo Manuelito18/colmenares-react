@@ -1,5 +1,5 @@
 import styles from "./styles/CardProduct.module.css";
-import CartIcon from "../../public/imgs/icons/CartCard.svg";
+import CartIcon from "/imgs/icons/CartCard.svg";
 
 export default function CardProduct({ producto, onAddToCart }) {
   const { nombre, precio, imagen, rating = 0, stado } = producto;

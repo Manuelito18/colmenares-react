@@ -12,5 +12,26 @@ export const users = [
     role: "Desarrollador Web - Full Stack",
     des: "Me especializo en crear soluciones eficientes, escalables y centradas en el usuario. Trabajo bien en equipo, me adapto rápido y siempre busco aprender nuevas herramientas para mejorar mis proyectos",
     github: null,
-  }
+  },
+  {
+    img: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/02/neo-matrix.jpg?tf=1200x1200",
+    name: "Josué Harol Silva Ochoa",
+    role: "Ingeniero de sistemas de día, Docente de Álgebra por la tarde y Asistente contable de noche",
+    des: "Simplemente un ingeniero de sistemas que esperabas?",
+    github: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+  },
+  {
+    img: "https://unavatar.io/github/shadow",
+    name: "Sebastian Berrospi Diaz",
+    role: "Programador",
+    des: "LA eminencia de shadow",
+    github: "",
+  },
+  {
+    img: "https://unavatar.io/github/furry",
+    name: "Pietro Ralf",
+    role: "Programador",
+    des: "q liko",
+    github: "",
+  },
 ]
