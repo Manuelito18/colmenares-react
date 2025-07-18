@@ -2,8 +2,8 @@
   background-color: #0f172a;
   border-radius: 12px;
   overflow: hidden;
-  width: 100%; /* ✅ Que ocupe el espacio disponible */
-  max-width: 100%; /* Evita que se pase en layouts estrechos */
+  width: 100%;
+  max-width: 100%;
   height: 360px;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,7 @@
 .imageContainer {
   position: relative;
   background-color: #1e293b;
+  min-height: 180px;
   height: 180px;
   display: flex;
   align-items: center;
