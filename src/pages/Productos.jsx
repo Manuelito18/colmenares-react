@@ -4,7 +4,6 @@ import { useState, useMemo } from "react";
 import { categorias } from "../data/categProducs";
 import { productos } from "../data/productos";
 import CardProduct from "../components/CardProduct";
-
 const CATEGORIAS_INICIALES = [
   "guitarras",
   "bajos",
@@ -12,24 +11,19 @@ const CATEGORIAS_INICIALES = [
   "amplificadores",
   "accesorios",
 ];
-
 export default function Productos() {
   const [busqueda, setBusqueda] = useState("");
   const [ordenPrecio, setOrdenPrecio] = useState("asc");
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
   const [filtroStado, setFiltroStado] = useState(null); // "oferta", "nuevo", "normal", null
   const [verTodas, setVerTodas] = useState(false);
-
   const navigate = useNavigate();
-
   const manejarBusqueda = (e) => {
     e.preventDefault();
   };
-
   const handleAddToCart = (producto) => {
     console.log("Agregar al carrito:", producto);
   };
-
   const allProducts = useMemo(
     () =>
       Object.entries(productos).flatMap(([categoria, lista]) =>
@@ -61,21 +55,14 @@ export default function Productos() {
       }
     }
 
-    const destacados = lista.filter((p) => p.stado === true);
-    const normales = lista.filter((p) => p.stado !== true);
-
-    const ordenar = (arr) =>
-      [...arr].sort((a, b) =>
-        ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
-      );
-
-    return [...ordenar(destacados), ...ordenar(normales)];
+    return [...lista].sort((a, b) =>
+      ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
+    );
   }, [allProducts, categoriaSeleccionada, busqueda, ordenPrecio, filtroStado]);
 
   return (
     <div className={styles.container}>
       <h1 className={styles.titulo}>Nuestros Productos</h1>
-
       <div className={styles.categoriasNav}>
         {categorias
           .filter((cat) => verTodas || CATEGORIAS_INICIALES.includes(cat.ruta))
@@ -93,7 +80,6 @@ export default function Productos() {
               {cat.nombre}
             </button>
           ))}
-
         <button
           className={styles.toggleBtn}
           onClick={() => setVerTodas((prev) => !prev)}
@@ -101,7 +87,6 @@ export default function Productos() {
           {verTodas ? "Ocultar Categorías" : "Ver Todas"}
         </button>
       </div>
-
       <form onSubmit={manejarBusqueda} className={styles.buscador}>
         <input
           type="text"
@@ -111,7 +96,6 @@ export default function Productos() {
         />
         <button type="submit">Buscar</button>
       </form>
-
       <div className={styles.filtros}>
         <label>Ordenar:</label>
         <select
@@ -121,7 +105,6 @@ export default function Productos() {
           <option value="asc">Menor → Mayor</option>
           <option value="desc">Mayor → Menor</option>
         </select>
-
         <label>Tipo:</label>
         <select
           value={filtroStado || ""}
@@ -135,7 +118,6 @@ export default function Productos() {
           <option value="normal">Solo normales</option>
         </select>
       </div>
-
       <div className={styles.gridFlat}>
         {productosFiltrados.map((p) => (
           <CardProduct key={p.id} producto={p} onAddToCart={handleAddToCart} />

@@ -10,12 +10,11 @@ export default function CategoriaProductos() {
   const [busqueda, setBusqueda] = useState("");
   const [ordenPrecio, setOrdenPrecio] = useState("asc");
 
-  const productosCategoria = productos[categoriaId] || [];
-
   const nombreCategoria =
     categorias.find((cat) => cat.ruta === categoriaId)?.nombre || categoriaId;
 
   const productosFiltrados = useMemo(() => {
+    const productosCategoria = productos[categoriaId] || [];
     let lista = productosCategoria;
 
     if (busqueda) {
@@ -24,16 +23,10 @@ export default function CategoriaProductos() {
       );
     }
 
-    const destacados = lista.filter((p) => p.stado === true);
-    const normales = lista.filter((p) => p.stado !== true);
-
-    const ordenar = (arr) =>
-      [...arr].sort((a, b) =>
-        ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
-      );
-
-    return [...ordenar(destacados), ...ordenar(normales)];
-  }, [productosCategoria, busqueda, ordenPrecio]);
+    return [...lista].sort((a, b) =>
+      ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
+    );
+  }, [categoriaId, busqueda, ordenPrecio]);
 
   const handleAddToCart = (producto) => {
     console.log("Agregar al carrito:", producto);
