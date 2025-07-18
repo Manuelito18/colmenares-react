@@ -1,8 +1,8 @@
+import styles from "./styles/CategoriaProductos.module.css";
 import { useParams } from "react-router-dom";
 import { productos } from "../data/productos";
 import { categorias } from "../data/categProducs";
 import CardProduct from "../components/CardProduct";
-import styles from "./styles/CategoriaProductos.module.css";
 import { useMemo, useState } from "react";
 
 export default function CategoriaProductos() {

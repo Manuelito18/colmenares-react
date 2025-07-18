@@ -2,14 +2,17 @@
   background-color: #0f172a;
   border-radius: 12px;
   overflow: hidden;
-  width: 260px;
-  height: 360px; /* Más rectangular */
+  width: 100%; /* ✅ Que ocupe el espacio disponible */
+  max-width: 100%; /* Evita que se pase en layouts estrechos */
+  height: 360px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
   position: relative;
+  box-sizing: border-box;
 }
+
 
 .card:hover {
   transform: translateY(-4px);

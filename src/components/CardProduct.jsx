@@ -29,7 +29,7 @@ export default function CardProduct({ producto, onAddToCart }) {
         <div className={styles.rating}>{renderStars()}</div>
 
         <div className={styles.priceRow}>
-          <span className={styles.price}>${precio}</span>
+          <span className={styles.price}>S/ {precio}</span>
         </div>
 
         <button

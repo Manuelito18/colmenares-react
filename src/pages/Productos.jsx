@@ -5,21 +5,25 @@ import { categorias } from "../data/categProducs";
 import { productos } from "../data/productos";
 import CardProduct from "../components/CardProduct";
 
+const CATEGORIAS_INICIALES = [
+  "guitarras",
+  "bajos",
+  "teclados-pianos",
+  "amplificadores",
+  "accesorios",
+];
+
 export default function Productos() {
   const [busqueda, setBusqueda] = useState("");
   const [ordenPrecio, setOrdenPrecio] = useState("asc");
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
   const [filtroStado, setFiltroStado] = useState(null); // "oferta", "nuevo", "normal", null
+  const [verTodas, setVerTodas] = useState(false);
 
   const navigate = useNavigate();
 
   const manejarBusqueda = (e) => {
     e.preventDefault();
-  };
-
-  const irACategoria = (ruta) => {
-    setCategoriaSeleccionada(ruta);
-    navigate(`/productos/${ruta}`);
   };
 
   const handleAddToCart = (producto) => {
@@ -68,37 +72,33 @@ export default function Productos() {
     return [...ordenar(destacados), ...ordenar(normales)];
   }, [allProducts, categoriaSeleccionada, busqueda, ordenPrecio, filtroStado]);
 
-  const grouped = useMemo(() => {
-    return productosFiltrados.reduce((acc, p) => {
-      acc[p.categoria] = acc[p.categoria] || [];
-      acc[p.categoria].push(p);
-      return acc;
-    }, {});
-  }, [productosFiltrados]);
-
   return (
     <div className={styles.productos}>
       <h1 className={styles.titulo}>Nuestros Productos</h1>
 
       <div className={styles.categoriasNav}>
-        {categorias.map((cat) => (
-          <button
-            key={cat.ruta}
-            className={`${styles.catBtn} ${
-              categoriaSeleccionada === cat.ruta ? styles.active : ""
-            }`}
-            onClick={() => irACategoria(cat.ruta)}
-          >
-            {cat.nombre}
-          </button>
-        ))}
+        {categorias
+          .filter((cat) => verTodas || CATEGORIAS_INICIALES.includes(cat.ruta))
+          .map((cat) => (
+            <button
+              key={cat.ruta}
+              className={`${styles.catBtn} ${
+                categoriaSeleccionada === cat.ruta ? styles.active : ""
+              }`}
+              onClick={() => {
+                setCategoriaSeleccionada(cat.ruta);
+                navigate(`/productos/${cat.ruta}`);
+              }}
+            >
+              {cat.nombre}
+            </button>
+          ))}
+
         <button
-          className={`${styles.catBtn} ${
-            categoriaSeleccionada === null ? styles.active : ""
-          }`}
-          onClick={() => setCategoriaSeleccionada(null)}
+          className={styles.toggleBtn}
+          onClick={() => setVerTodas((prev) => !prev)}
         >
-          Todas
+          {verTodas ? "Ocultar Categorías" : "Ver Todas"}
         </button>
       </div>
 
@@ -136,23 +136,9 @@ export default function Productos() {
         </select>
       </div>
 
-      <div className={styles.gridProductos}>
-        {Object.entries(grouped).map(([catName, prods]) => (
-          <div key={catName} className={styles.categoriaSection}>
-            <h2 className={styles.subtitulo}>
-              {categorias.find((c) => c.ruta === catName)?.nombre ||
-                "Productos"}
-            </h2>
-            <div className={styles.gridCategoria}>
-              {prods.map((p) => (
-                <CardProduct
-                  key={p.id}
-                  producto={p}
-                  onAddToCart={handleAddToCart}
-                />
-              ))}
-            </div>
-          </div>
+      <div className={styles.gridFlat}>
+        {productosFiltrados.map((p) => (
+          <CardProduct key={p.id} producto={p} onAddToCart={handleAddToCart} />
         ))}
       </div>
     </div>
