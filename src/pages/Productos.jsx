@@ -73,7 +73,7 @@ export default function Productos() {
   }, [allProducts, categoriaSeleccionada, busqueda, ordenPrecio, filtroStado]);
 
   return (
-    <div className={styles.productos}>
+    <div className={styles.container}>
       <h1 className={styles.titulo}>Nuestros Productos</h1>
 
       <div className={styles.categoriasNav}>
