@@ -45,14 +45,23 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
 
 .vacio {
   text-align: center;
   color: #ccc;
+}
+@media (max-width: 600px) {
+
+  .categoria {
+    padding: 0;
+  }
+  .titulo, .controles {
+    padding: 0.8rem 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0.625rem;
+  }
 }
