@@ -35,7 +35,7 @@ export default function ProductBlock() {
             <CardProduct
               key={producto.id}
               producto={producto}
-              onAddToCart={(p) => console.log(p)}
+              onAddToCart={(pro) => console.log(pro)}
             />
           ))}
         </div>
