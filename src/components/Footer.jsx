@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import {
   FaGithub,
   FaEnvelope,

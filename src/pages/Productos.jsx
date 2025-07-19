@@ -4,28 +4,26 @@ import { useState, useMemo } from "react";
 import { categorias } from "../data/categProducs";
 import { productos } from "../data/productos";
 import CardProduct from "../components/CardProduct";
-
+const CATEGORIAS_INICIALES = [
+  "guitarras",
+  "bajos",
+  "teclados-pianos",
+  "amplificadores",
+  "accesorios",
+];
 export default function Productos() {
   const [busqueda, setBusqueda] = useState("");
   const [ordenPrecio, setOrdenPrecio] = useState("asc");
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
   const [filtroStado, setFiltroStado] = useState(null); // "oferta", "nuevo", "normal", null
-
+  const [verTodas, setVerTodas] = useState(false);
   const navigate = useNavigate();
-
   const manejarBusqueda = (e) => {
     e.preventDefault();
   };
-
-  const irACategoria = (ruta) => {
-    setCategoriaSeleccionada(ruta);
-    navigate(`/productos/${ruta}`);
-  };
-
   const handleAddToCart = (producto) => {
     console.log("Agregar al carrito:", producto);
   };
-
   const allProducts = useMemo(
     () =>
       Object.entries(productos).flatMap(([categoria, lista]) =>
@@ -57,51 +55,38 @@ export default function Productos() {
       }
     }
 
-    const destacados = lista.filter((p) => p.stado === true);
-    const normales = lista.filter((p) => p.stado !== true);
-
-    const ordenar = (arr) =>
-      [...arr].sort((a, b) =>
-        ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
-      );
-
-    return [...ordenar(destacados), ...ordenar(normales)];
+    return [...lista].sort((a, b) =>
+      ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
+    );
   }, [allProducts, categoriaSeleccionada, busqueda, ordenPrecio, filtroStado]);
 
-  const grouped = useMemo(() => {
-    return productosFiltrados.reduce((acc, p) => {
-      acc[p.categoria] = acc[p.categoria] || [];
-      acc[p.categoria].push(p);
-      return acc;
-    }, {});
-  }, [productosFiltrados]);
-
   return (
-    <div className={styles.productos}>
+    <div className={styles.container}>
       <h1 className={styles.titulo}>Nuestros Productos</h1>
-
       <div className={styles.categoriasNav}>
-        {categorias.map((cat) => (
-          <button
-            key={cat.ruta}
-            className={`${styles.catBtn} ${
-              categoriaSeleccionada === cat.ruta ? styles.active : ""
-            }`}
-            onClick={() => irACategoria(cat.ruta)}
-          >
-            {cat.nombre}
-          </button>
-        ))}
+        {categorias
+          .filter((cat) => verTodas || CATEGORIAS_INICIALES.includes(cat.ruta))
+          .map((cat) => (
+            <button
+              key={cat.ruta}
+              className={`${styles.catBtn} ${
+                categoriaSeleccionada === cat.ruta ? styles.active : ""
+              }`}
+              onClick={() => {
+                setCategoriaSeleccionada(cat.ruta);
+                navigate(`/productos/${cat.ruta}`);
+              }}
+            >
+              {cat.nombre}
+            </button>
+          ))}
         <button
-          className={`${styles.catBtn} ${
-            categoriaSeleccionada === null ? styles.active : ""
-          }`}
-          onClick={() => setCategoriaSeleccionada(null)}
+          className={styles.toggleBtn}
+          onClick={() => setVerTodas((prev) => !prev)}
         >
-          Todas
+          {verTodas ? "Ocultar Categorías" : "Ver Todas"}
         </button>
       </div>
-
       <form onSubmit={manejarBusqueda} className={styles.buscador}>
         <input
           type="text"
@@ -111,7 +96,6 @@ export default function Productos() {
         />
         <button type="submit">Buscar</button>
       </form>
-
       <div className={styles.filtros}>
         <label>Ordenar:</label>
         <select
@@ -121,7 +105,6 @@ export default function Productos() {
           <option value="asc">Menor → Mayor</option>
           <option value="desc">Mayor → Menor</option>
         </select>
-
         <label>Tipo:</label>
         <select
           value={filtroStado || ""}
@@ -135,24 +118,9 @@ export default function Productos() {
           <option value="normal">Solo normales</option>
         </select>
       </div>
-
-      <div className={styles.gridProductos}>
-        {Object.entries(grouped).map(([catName, prods]) => (
-          <div key={catName} className={styles.categoriaSection}>
-            <h2 className={styles.subtitulo}>
-              {categorias.find((c) => c.ruta === catName)?.nombre ||
-                "Productos"}
-            </h2>
-            <div className={styles.gridCategoria}>
-              {prods.map((p) => (
-                <CardProduct
-                  key={p.id}
-                  producto={p}
-                  onAddToCart={handleAddToCart}
-                />
-              ))}
-            </div>
-          </div>
+      <div className={styles.gridFlat}>
+        {productosFiltrados.map((p) => (
+          <CardProduct key={p.id} producto={p} onAddToCart={handleAddToCart} />
         ))}
       </div>
     </div>
