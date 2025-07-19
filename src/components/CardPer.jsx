@@ -1,5 +1,5 @@
 import styles from "./styles/CardPer.module.css";
-import { FaGithub } from "react-icons/fa"; // Asegúrate de tener react-icons instalado
+import { FaGithub } from "react-icons/fa";
 
 export default function CardPer({
   img = null,

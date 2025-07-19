@@ -1,5 +1,5 @@
 import styles from "./styles/CardProduct.module.css";
-import CartIcon from "../../public/imgs/icons/CartCard.svg";
+import CartIcon from "/imgs/icons/CartCard.svg";
 
 export default function CardProduct({ producto, onAddToCart }) {
   const { nombre, precio, imagen, rating = 0, stado } = producto;
@@ -29,7 +29,7 @@ export default function CardProduct({ producto, onAddToCart }) {
         <div className={styles.rating}>{renderStars()}</div>
 
         <div className={styles.priceRow}>
-          <span className={styles.price}>${precio}</span>
+          <span className={styles.price}>S/ {precio}</span>
         </div>
 
         <button

@@ -1,4 +1,4 @@
-.productos {
+.container {
   padding: 2rem 2rem;
   max-width: 1300px;
   margin: 0 auto;
@@ -99,29 +99,28 @@
   min-width: 180px;
 }
 
-.gridProductos {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.toggleBtn {
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  color: #ffd700;
+  border: 1px dashed #ffd700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.categoriaSection {
-  margin-bottom: 2rem;
+.toggleBtn:hover {
+  background-color: #ffd700;
+  color: #1e1e1e;
 }
 
-.subtitulo {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #f1f1f1;
-  text-transform: uppercase;
-  border-bottom: 2px solid #444;
-  padding-bottom: 0.5rem;
-}
-
-.gridCategoria {
+.gridFlat {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
@@ -137,4 +136,20 @@
   .filtros select {
     width: 100%;
   }
+
+  .gridFlat {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0.625rem;
+  }
+
+  .container{
+    padding: 2rem 0 ;
+  }
+  .titulo, .buscador, .categoriasNav, .filtros {
+    padding-right: 32px;
+    padding-left:  32px;
+  }
 }
+
+

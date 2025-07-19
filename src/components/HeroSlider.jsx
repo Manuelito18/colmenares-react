@@ -31,7 +31,6 @@ const HeroSlider = ({ slides = [] }) => {
   }, [nextSlide, slidesCount]);
 
   function irACatalogo() {
-    //mala practica pero que pereza hacerlo bien1
     var ir;
     if (currentSlide === 0) ir = "guitarras";
     if (currentSlide === 1) ir = "teclados-pianos";

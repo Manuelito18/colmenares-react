@@ -1,6 +1,6 @@
 import styles from "./styles/ProductBlock.module.css";
 import { productos } from "../data/productos";
-import ProductCard from "./CardProduct";
+import CardProduct from "./CardProduct";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductBlock() {
@@ -32,10 +32,10 @@ export default function ProductBlock() {
         <h2 className={styles.title}>Productos Destacados</h2>
         <div className={styles.grid}>
           {productosEnOferta.map((producto) => (
-            <ProductCard
+            <CardProduct
               key={producto.id}
               producto={producto}
-              onAddToCart={(p) => console.log("Añadir al carrito:", p)}
+              onAddToCart={(pro) => console.log(pro)}
             />
           ))}
         </div>

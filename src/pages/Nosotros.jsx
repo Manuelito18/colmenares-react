@@ -7,24 +7,26 @@ export default function Nosotros() {
   return (
     <div className={styles.container}>
       <div className={styles.section}>
-        <BlockText
-          title="Sobre Nosotros"
-          text="Mas de 25 años compartiendo la pasion por la musica"
-          background="linear-gradient(135deg, #591C86, #821844)"
-        />
+        <div className={styles.blockTextWrapper}>
+          <BlockText
+            title="Sobre Nosotros"
+            text="Más de 25 años compartiendo la pasión por la música"
+            background="linear-gradient(135deg, #591C86, #821844)"
+          />
+        </div>
       </div>
       <div className={styles.history}>
         <div className={styles.historyText}>
           <h2>Nuestra Historia</h2>
           <p>
-            Instrumentos Musicales COLMENARES nació en 1998 con un sueño simple
-            pero poderoso: hacer que la música sea accesible para todos.
-            Comenzamos como una pequeña tienda familiar en el corazón de la
-            ciudad, con la visión de ofrecer instrumentos de calidad a precios
-            justos. A lo largo de los años, hemos crecido junto con nuestra
-            comunidad musical, expandiendo nuestro catálogo y servicios, pero
-            manteniendo siempre nuestros valores fundamentales: calidad,
-            servicio personalizado y pasión por la músic
+            Nuestra tienda instrumentos Musicales COLMENARES nació en 2010 con
+            un sueño simple pero poderoso: hacer que la música sea accesible
+            para todos. Comenzamos como una pequeña tienda familiar en el
+            corazón de la ciudad, con la visión de ofrecer instrumentos de
+            calidad a precios justos. A lo largo de los años, hemos crecido
+            junto con nuestra comunidad musical, expandiendo nuestro catálogo y
+            servicios, pero manteniendo siempre nuestros valores fundamentales:
+            calidad, servicio personalizado y pasión por la músic
           </p>
         </div>
         <div className={styles.historyImage}>
