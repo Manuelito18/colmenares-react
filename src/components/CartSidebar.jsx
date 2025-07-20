@@ -59,7 +59,7 @@ export default function CartSidebar({ isOpen, toggleCart }) {
             <strong>Total:</strong> S/ {total}
           </p>
           <Link
-            to="/checkout"
+            to="checkout"
             className={styles.checkoutBtn}
             onClick={toggleCart}
           >

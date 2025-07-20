@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { categorias } from "../data/categProducs";
 import { productos } from "../data/productos";
 import CardProduct from "../components/CardProduct";
+
 const CATEGORIAS_INICIALES = [
   "guitarras",
   "bajos",
