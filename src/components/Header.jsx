@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/Header.module.css";
+import { useCart } from "../context/CartContext";
+import CartSidebar from "../components/CartSidebar";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -9,6 +11,9 @@ export default function Navbar() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
+  const { cartItems } = useCart();
+  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
   useEffect(() => {
     const manejarScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -16,6 +21,13 @@ export default function Navbar() {
     window.addEventListener("scroll", manejarScroll);
     return () => window.removeEventListener("scroll", manejarScroll);
   }, []);
+  useEffect(() => {
+    if (isCartOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [isCartOpen]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
@@ -69,7 +81,7 @@ export default function Navbar() {
               src="/imgs/icons/cart.svg"
               alt="Carrito"
             />
-            <span className={styles.cartBadge}>2</span>
+            <span className={styles.cartBadge}>{totalQuantity}</span>
           </button>
           <button className={styles.btnGhostMenuBtn} onClick={toggleMenu}>
             <img
@@ -93,16 +105,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {isCartOpen && (
-        <div className={styles.cartSidebar}>
-          <h3>Tu carrito</h3>
-          <ul>
-            <li>Producto 1</li>
-            <li>Producto 2</li>
-          </ul>
-          <button onClick={toggleCart}>Cerrar</button>
-        </div>
-      )}
+      <CartSidebar isOpen={isCartOpen} toggleCart={toggleCart} />
     </>
   );
 }

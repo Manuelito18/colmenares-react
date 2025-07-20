@@ -1,9 +1,11 @@
 import styles from "./styles/CardProduct.module.css";
 import CartIcon from "/imgs/icons/CartCard.svg";
 
-export default function CardProduct({ producto, onAddToCart }) {
-  const { nombre, precio, imagen, rating = 0, stado } = producto;
+import { useCart } from "../context/CartContext";
 
+export default function CardProduct({ producto }) {
+  const { nombre, precio, imagen, rating = 0, stado } = producto;
+  const { addToCart } = useCart();
   const badgeLabel =
     stado === true ? "OFERTA" : stado === false ? "NUEVO" : null;
 
@@ -34,7 +36,7 @@ export default function CardProduct({ producto, onAddToCart }) {
 
         <button
           className={styles.cartBtn}
-          onClick={() => onAddToCart(producto)}
+          onClick={() => addToCart(producto)}
           aria-label="Agregar al carrito"
         >
           <img src={CartIcon} alt="Carrito" className={styles.cartIcon} />

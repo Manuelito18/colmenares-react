@@ -5,6 +5,7 @@ import Productos from "../pages/Productos";
 import Contacto from "../pages/Contacto";
 import Nosotros from "../pages/Nosotros";
 import CategoriaProductos from "../pages/CategoriaProductos";
+import Checkout from "../pages/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "contacto", element: <Contacto /> },
       { path: "nosotros", element: <Nosotros /> },
       { path: "productos/:categoriaId", element: <CategoriaProductos /> },
+      { path: "checkout", element: <Checkout /> },
     ],
   },
 ]);
