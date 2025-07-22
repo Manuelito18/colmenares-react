@@ -1,11 +1,13 @@
 import styles from "./styles/CardProduct.module.css";
 import CartIcon from "/imgs/icons/CartCard.svg";
-
 import { useCart } from "../context/CartContext";
+import { useNotification } from "../context/NotificationContext";
 
 export default function CardProduct({ producto }) {
   const { nombre, precio, imagen, rating = 0, stado } = producto;
   const { addToCart } = useCart();
+  const { setMessage } = useNotification();
+
   const badgeLabel =
     stado === true ? "OFERTA" : stado === false ? "NUEVO" : null;
 
@@ -18,6 +20,11 @@ export default function CardProduct({ producto }) {
         ★
       </span>
     ));
+
+  const handleAddToCart = () => {
+    addToCart(producto);
+    setMessage("¡Producto añadido al carrito!");
+  };
 
   return (
     <div className={styles.card}>
@@ -36,7 +43,7 @@ export default function CardProduct({ producto }) {
 
         <button
           className={styles.cartBtn}
-          onClick={() => addToCart(producto)}
+          onClick={handleAddToCart}
           aria-label="Agregar al carrito"
         >
           <img src={CartIcon} alt="Carrito" className={styles.cartIcon} />
