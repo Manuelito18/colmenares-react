@@ -2,7 +2,6 @@ import styles from "../components/styles/HeroSlider.module.css";
 import ChevronLeft from "../../src/assets/imgs/ChevronLeft.svg";
 import ChevronRight from "../../src/assets/imgs/ChevronRight.svg";
 import { useState, useEffect, useCallback } from "react";
-
 import { useNavigate } from "react-router-dom";
 
 const HeroSlider = ({ slides = [] }) => {
