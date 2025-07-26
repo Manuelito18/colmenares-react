@@ -24,14 +24,14 @@ export const users = [
     img: "https://unavatar.io/github/shadow",
     name: "Sebastian Berrospi Diaz",
     role: "Programador",
-    des: "LA eminencia de shadow",
+    des: "La eminencia de shadow",
     github: "",
   },
   {
     img: "https://unavatar.io/github/furry",
-    name: "Pietro Ralf",
+    name: "Pietro Ralf Puluche Espejo",
     role: "Programador",
-    des: "q liko",
+    des: "queOnda-uwu",
     github: "",
   },
 ]
