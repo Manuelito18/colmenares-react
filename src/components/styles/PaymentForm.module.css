@@ -50,7 +50,7 @@ input {
   margin-bottom: 0.5rem;
 }
 
-button[type="submit"] {
+.btnPago {
   margin-top: 1.5rem;
   padding: 0.75rem;
   background-color: #f59e0b;
