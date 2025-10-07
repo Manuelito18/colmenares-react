@@ -11,12 +11,12 @@
 
 ---
 
-## 🐝 ¿Qué es *Colmenares*?
+## 🐝 ¿Qué es _Colmenares_?
 
 **Colmenares** es una tienda de música, moderna y melódica, desarrollada con **React** y un diseño frontend bien afinado.  
 Está pensada como un proyecto educativo, visual y funcional, ideal para demostrar habilidades de frontend en el stack moderno.
 
-> *Inspirada por el ritmo del código limpio y el caos hermoso de un solo de guitarra...*
+> _Inspirada por el ritmo del código limpio y el caos hermoso de un solo de guitarra..._
 
 ---
 
@@ -30,13 +30,13 @@ Está pensada como un proyecto educativo, visual y funcional, ideal para demostr
 
 ## 🚀 Tech Stack
 
-| Herramienta       | Descripción                          |
-|-------------------|--------------------------------------|
-| ⚛️ React          | Librería principal del frontend      |
-| 🌀 React Router   | Navegación SPA                       |
-| 💨 TailwindCSS    | Estilos rápidos y modernos           |
-| 🧩 Vite           | Bundler ultrarrápido                 |
-| 🎸 Assets libres  | Íconos, imágenes y buena onda        |
+| Herramienta      | Descripción                     |
+| ---------------- | ------------------------------- |
+| ⚛️ React         | Librería principal del frontend |
+| 🌀 React Router  | Navegación SPA                  |
+| 💨 TailwindCSS   | Estilos rápidos y modernos      |
+| 🧩 Vite          | Bundler ultrarrápido            |
+| 🎸 Assets libres | Íconos, imágenes y buena onda   |
 
 ---
 
@@ -62,3 +62,5 @@ npm run dev
   <li>https://docs.waifu.im/?ref=public_apis&utm_medium=website</li>
   <li>https://soruly.github.io/trace.moe-api/#/?ref=public_apis&utm_medium=website</li>
 </ul> -->
+
+# ESTA VERSION ESTA PENSADA PARA IMPLEMENTAR PHP
