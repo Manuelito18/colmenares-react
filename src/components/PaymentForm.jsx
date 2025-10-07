@@ -63,7 +63,9 @@ export default function PaymentForm({ onPay }) {
           />
         </div>
       )}
-      <button type="submit">Pagar ahora</button>
+      <button type="submit" className={styles.btnPago}>
+        Pagar ahora
+      </button>
     </form>
   );
 }

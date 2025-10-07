@@ -95,7 +95,9 @@ export default function Productos() {
           value={busqueda}
           onChange={(e) => setBusqueda(e.target.value)}
         />
-        <button type="submit">Buscar</button>
+        <button type="submit" className={styles.btnBuscar}>
+          Buscar
+        </button>
       </form>
       <div className={styles.filtros}>
         <label>Ordenar:</label>

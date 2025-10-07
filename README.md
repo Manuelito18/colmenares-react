@@ -6,7 +6,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Made%20with-React-blue?style=flat&logo=react" />
   <img src="https://img.shields.io/badge/Status-En%20Desarrollo-orange?style=flat" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat" />
+  <img src="https://img.shields.io/badge/License-CC0-green?style=flat" />
 </p>
 
 ---
